@@ -23,15 +23,15 @@ def dfs(x, y):
             dfs(nx, ny)
     return
 
-count = 1
-temp = 1
+count = 0
 result = []
 for i in range(n):
     for j in range(n):
         if maps[i][j] == 1:
+            count += 1
             dfs(i, j)
             result.append(count)
-            count = 1
+            count = 0
             
 print(len(result))
 result.sort()
