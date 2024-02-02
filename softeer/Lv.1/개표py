@@ -1,0 +1,20 @@
+# 개표
+# https://softeer.ai/practice/7698
+import sys
+input = sys.stdin.readline
+
+for t in range(int(input())):
+    p = int(input())
+    a = '++++'
+    b = '|'
+    result = ''
+    n = (p//5) + (p%5)
+    k = p//5
+    for i in range(n):
+        if i < k:
+            result += a
+        else:
+            result += b
+        if i < n-1 and i < k:
+            result += ' '
+    print(result)
